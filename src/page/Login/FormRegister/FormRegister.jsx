@@ -113,7 +113,7 @@ export const FormRegister = () => {
                 <BtnModeDark className={'bg-transparent text-[#191E25] text-[22px] mt-2 max-xl:mt-0 ml-16'} />
             </div>
 
-            <form className="shadow-black shadow-sm bg-white dark:bg-[#191E25] text-center flex flex-col px-10   gap-5  py-10  rounded-[20px]  w-full  absolute bottom-0 top-10  ">
+            <form className="shadow-black shadow-sm bg-white dark:bg-[#191E25] text-center flex flex-col px-10 max-sm:justify-center   gap-5  py-10  rounded-[20px]  w-full  absolute bottom-0 top-10  ">
 
                 {visible ? <></> :
 
