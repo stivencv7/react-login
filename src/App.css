@@ -39,3 +39,8 @@
 .read-the-docs {
   color: #888;
 } */
+input[type="password"]::-webkit-password-suffix {
+  color: red; /* Cambia el color según tus preferencias */
+}
+
+

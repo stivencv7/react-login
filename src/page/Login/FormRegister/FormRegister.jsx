@@ -106,14 +106,14 @@ export const FormRegister = () => {
 
 
 
-            <div className=" w-full rounded-t-[20px]  text-white px-[20px] flex gap-10  max-sm:gap-14  max-xl:gap-4   items-center  absolute top-0 right-0 left-0">
+            <div className=" w-full rounded-t-[20px]  text-white px-[20px] flex gap-10   max-xl:gap-6   items-center  absolute top-0 right-0 left-0">
 
                 <BtnReusable className={`${visible ? "border-none" : 'border-b-4'}   text-[15px] dark:text-white border-solid dark:border-solid dark:border-[#E5D714] border-[black] text-black mt-2 pb-2`} text={"Sign Up"} click={() => setVisible(false)} />
                 <BtnReusable className={`${visible ? 'border-b-4' : ''} text-[15px] dark:text-white   text-black border-[black] dark:border-[#E5D714] mt-2 pb-2`} text={"Sign In"} click={() => setVisible(true)} />
                 <BtnModeDark className={'bg-transparent text-[#191E25] text-[22px] mt-2 max-xl:mt-0 ml-16'} />
             </div>
 
-            <form className="shadow-black shadow-sm bg-white dark:bg-[#191E25] text-center flex flex-col px-10 max-sm:justify-center   gap-5  py-10  rounded-[20px]  w-full  absolute bottom-0 top-10  ">
+            <form className="shadow-black shadow-sm bg-white dark:bg-[#191E25] text-center flex flex-col px-10 max-sm:justify-center max-sm:rounded-none focus:text-white  gap-5 max-sm:gap-8  py-10  rounded-[20px]  w-full  absolute bottom-0 top-10  ">
 
                 {visible ? <></> :
 

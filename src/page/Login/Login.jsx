@@ -8,7 +8,7 @@ export const Login = () => {
 
 
   return (
-    <div className={`flex h-[100vh]  justify-center items-center xl:flex-none `}>
+    <div className={`flex h-[100vh]    justify-center items-center xl:flex-none `}>
 
         <div className={`max-xl:hidden rounded-l-[30px] max-sm:w-[80%]  max-sm:rounded-none bg-white dark:shadow-left dark:bg-[#14181F] w-[45%] h-[90%]  flex flex-col items-center justify-center dark:rounded-br-[80px]  `}>
           
