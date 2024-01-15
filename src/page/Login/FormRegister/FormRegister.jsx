@@ -71,6 +71,7 @@ export const FormRegister = () => {
                 let user = JSON.stringify({ username: username, email: email, password: password });
                 localStorage.setItem('user', user)
                 toast.success('Registered User')
+                formatData()
                 formatErrors();
                 setVisible(true)
 
@@ -89,7 +90,7 @@ export const FormRegister = () => {
             let user = JSON.parse(localStorage.getItem('user'));
             console.log(user);
             if (user.email == email && user.password) {
-                toast.success('Welcomo👋')
+                toast.success('Welcome👋')
                 formatErrors()
                 formatData()
                 setVisible(false)
@@ -121,8 +122,10 @@ export const FormRegister = () => {
 
             <div className=" w-full rounded-t-[20px]  text-white px-[20px] flex gap-10   max-xl:gap-6   items-center  absolute top-0 right-0 left-0">
 
-                <BtnReusable className={`${visible ? "border-none" : 'border-b-4'}   text-[15px] dark:text-white border-solid dark:border-solid dark:border-[#E5D714] border-[black] text-black mt-2 pb-2`} text={"Sign Up"} click={() => setVisible(false)} />
-                <BtnReusable className={`${visible ? 'border-b-4' : ''} text-[15px] dark:text-white   text-black border-[black] dark:border-[#E5D714] mt-2 pb-2`} text={"Sign In"} click={() => setVisible(true)} />
+                <BtnReusable className={`${visible ? "border-none" : 'border-b-4'}   text-[15px] dark:text-white border-solid dark:border-solid dark:border-[#E5D714] border-[black] text-black mt-2 pb-2`} text={"Sign Up"} click={() =>{ setVisible(false) 
+                formatData()}} />
+                <BtnReusable className={`${visible ? 'border-b-4' : ''} text-[15px] dark:text-white   text-black border-[black] dark:border-[#E5D714] mt-2 pb-2`} text={"Sign In"} click={() =>{ setVisible(true) 
+                    formatData()}} />
                 <BtnModeDark className={'bg-transparent text-[#191E25] text-[22px] mt-2 max-xl:mt-0 ml-16'} />
             </div>
 
