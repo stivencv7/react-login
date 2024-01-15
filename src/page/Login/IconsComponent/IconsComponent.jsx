@@ -5,7 +5,7 @@ import { LuTwitter } from "react-icons/lu";
 import { ImPinterest2 } from "react-icons/im";
 import { LinkResuable } from "../../../Share/LinkRusable/LinkResuable";
 
-export const IconsComponent = ({darkMode}) => {
+export const IconsComponent = () => {
   return (
     <div className="flex items-center justify-center gap-6">
 
