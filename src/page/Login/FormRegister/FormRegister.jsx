@@ -118,11 +118,11 @@ export const FormRegister = () => {
 
 
     return (
-        <div className="bg-[#E5D714] dark:bg-[#5a5151c0] flex flex-col  max-xl:w-[90%]  max-sm:rounded-none  max-sm:w-[100%] w-[55%] h-[70%] max-sm:h-[100%]  max-xl:h-[80%]  rounded-[20px]  ">
+        <div className="bg-[#E5D714] dark:bg-[#5a5151c0] flex flex-col  max-xl:w-[90%]  max-sm:rounded-none  max-sm:w-[100%] w-[55%] h-[70%] max-sm:h-[80%]  max-xl:h-[80%]  rounded-[20px]  ">
 
 
 
-            <div className=" w-full rounded-t-[20px]  text-white px-[20px] flex gap-10   max-xl:gap-6   items-center ">
+            <div className="dark:bg-[#5a5151c0] w-full rounded-t-[20px]  text-white px-[20px] flex gap-10   max-xl:gap-6   items-center max-sm:rounded-none ">
 
                 <BtnReusable className={`${visible ? "border-none" : 'border-b-4'}   text-[15px] dark:text-white border-solid dark:border-solid dark:border-[#E5D714] border-[black] text-black mt-2 pb-2`} text={"Sign Up"} click={() =>{ setVisible(false) 
                 formatData()}} />
