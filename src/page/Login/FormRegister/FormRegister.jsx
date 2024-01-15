@@ -118,7 +118,7 @@ export const FormRegister = () => {
 
 
     return (
-        <div className="bg-[#E5D714] dark:bg-[#5a5151c0] flex flex-col  max-xl:w-[90%]  max-sm:rounded-none  max-sm:w-[100%] w-[55%] h-[70%] max-sm:h-[80%]  max-xl:h-[80%]  rounded-[20px]  ">
+        <div className="bg-[#E5D714] dark:bg-[#5a5151c0] flex flex-col  max-xl:w-[90%]  max-sm:rounded-none  max-sm:w-[100%] w-[55%] h-[70%] max-sm:h-[60%] max-sm:py-[0px]  max-xl:h-[80%]  rounded-[20px]  ">
 
 
 
@@ -131,7 +131,7 @@ export const FormRegister = () => {
                 <BtnModeDark className={'bg-transparent text-[#191E25] text-[22px] mt-2 max-xl:mt-0 ml-16'} />
             </div>
 
-            <form className="shadow-black shadow-sm bg-white dark:bg-[#191E25] text-center flex flex-col px-10  max-sm:rounded-none focus:text-white  gap-5 max-sm:gap-8  py-10  rounded-[20px]  w-full h-full max-sm:bottom-[100px]  ">
+            <form className="shadow-black shadow-sm bg-white dark:bg-[#191E25] text-center flex flex-col px-10  max-sm:rounded-none focus:text-white  gap-5 max-sm:gap-8  py-10  rounded-[20px]  w-full h-full  ">
 
                 {visible ? <></> :
 
