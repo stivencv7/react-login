@@ -118,7 +118,7 @@ export const FormRegister = () => {
 
 
     return (
-        <div className="bg-[#E5D714] dark:bg-[#5a5151c0] flex flex-col  max-xl:w-[90%]  max-sm:rounded-none  max-sm:w-[100%] w-[55%] h-[70%] max-sm:h-[60%] max-sm:py-[0px]  max-xl:h-[80%]  rounded-[20px]  ">
+        <div className="bg-[#E5D714] dark:bg-[#5a5151c0] flex flex-col  max-xl:w-[90%]  max-sm:rounded-none  max-sm:w-[100%] w-[55%] h-[70%] max-sm:h-[70%] max-sm:py-[0px]  max-xl:h-[80%]  rounded-[20px]  ">
 
 
 

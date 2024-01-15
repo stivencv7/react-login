@@ -7,7 +7,7 @@ import { LinkResuable } from "../../../Share/LinkRusable/LinkResuable";
 
 export const IconsComponent = () => {
   return (
-    <div className="flex items-center justify-center gap-6">
+    <div className="flex items-center justify-center gap-6 mt-14">
 
       <LinkResuable to={"/#"} text={ <SlSocialLinkedin className={`text-[18px] font-bold text-[#14181F]`} />}/>
       <LinkResuable to={"/#"} text={ <CiInstagram className={`text-[20px] font-bold text-[#14181F]`}/>}/>
