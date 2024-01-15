@@ -7,6 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { BtnModeDark } from "../../../Share/BtnModeDark/BtnModeDark";
 import { IoIosEye } from "react-icons/io";
 import { FaEyeSlash } from "react-icons/fa";
+import { IconsComponent } from "../IconsComponent/IconsComponent";
+import { InfoComponent } from "../InfoComponent/InfoComponent";
 
 
 export const FormRegister = () => {
@@ -116,11 +118,11 @@ export const FormRegister = () => {
 
 
     return (
-        <div className="bg-[#E5D714] dark:bg-[#5a5151c0] flex flex-col justify-center max-xl:w-[90%]  max-sm:rounded-none  max-sm:w-[100%] w-[55%] h-[70%] max-sm:h-[100%]  max-xl:h-[80%]  rounded-[20px] relative ">
+        <div className="bg-[#E5D714] dark:bg-[#5a5151c0] flex flex-col  max-xl:w-[90%]  max-sm:rounded-none  max-sm:w-[100%] w-[55%] h-[70%] max-sm:h-[100%]  max-xl:h-[80%]  rounded-[20px]  ">
 
 
 
-            <div className=" w-full rounded-t-[20px]  text-white px-[20px] flex gap-10   max-xl:gap-6   items-center  absolute top-0 right-0 left-0">
+            <div className=" w-full rounded-t-[20px]  text-white px-[20px] flex gap-10   max-xl:gap-6   items-center ">
 
                 <BtnReusable className={`${visible ? "border-none" : 'border-b-4'}   text-[15px] dark:text-white border-solid dark:border-solid dark:border-[#E5D714] border-[black] text-black mt-2 pb-2`} text={"Sign Up"} click={() =>{ setVisible(false) 
                 formatData()}} />
@@ -129,7 +131,7 @@ export const FormRegister = () => {
                 <BtnModeDark className={'bg-transparent text-[#191E25] text-[22px] mt-2 max-xl:mt-0 ml-16'} />
             </div>
 
-            <form className="shadow-black shadow-sm bg-white dark:bg-[#191E25] text-center flex flex-col px-10  max-sm:rounded-none focus:text-white  gap-5 max-sm:gap-8  py-10  rounded-[20px]  w-full  absolute bottom-0 top-10  ">
+            <form className="shadow-black shadow-sm bg-white dark:bg-[#191E25] text-center flex flex-col px-10  max-sm:rounded-none focus:text-white  gap-5 max-sm:gap-8  py-10  rounded-[20px]  w-full h-full max-sm:bottom-[100px]  ">
 
                 {visible ? <></> :
 
@@ -170,6 +172,7 @@ export const FormRegister = () => {
 
                 <a className="dark:text-white">I have an Account</a>
             </form>
+            
         </div>
     )
 }
