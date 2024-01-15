@@ -11,7 +11,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
 
   return (
-<>
+<div className='dark:bg-gradient-to-t  dark:from-[#e5d71498] dark:from-[2%] dark:to-[#14181fec] dark:to-[55%] max-sm:h-[100vh] flex flex-col justify-center'  >
       <div>
         <BrowserRouter>
           <Routes>
@@ -21,7 +21,7 @@ function App() {
       </div>
 
       <ToastContainer />
-    </>
+    </div>
   )
 }
 
