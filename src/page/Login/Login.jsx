@@ -18,7 +18,7 @@ export const Login = () => {
         
         </div>
 
-        <div className={`rounded-r-[30px] dark:max-xl:rounded-[0px]  max-sm:w-[100%]    max-sm:h-[100%]  max-sm:rounded-[0px]  bg-white dark:bg-[#E5D714] h-[90%] w-[45%] flex items-center justify-center flex-col gap-6 max-sm:pb-5   dark:rounded-tl-[80px]`}>
+        <div className={`rounded-r-[30px] dark:max-xl:rounded-[0px]  max-sm:w-[100%]    max-sm:h-[90%]  max-sm:rounded-[0px]  bg-white dark:bg-[#E5D714] h-[90%] w-[45%] flex items-center justify-center flex-col gap-6 max-sm:pb-5   dark:rounded-tl-[80px]`}>
           <FormRegister />
           <IconsComponent/>
           <InfoComponent  />
