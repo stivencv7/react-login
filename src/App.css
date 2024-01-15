@@ -43,4 +43,8 @@ input[type="password"]::-webkit-password-suffix {
   color: red; /* Cambia el color según tus preferencias */
 }
 
-
+.dark{
+  ::-ms-reveal{
+    filter: invert(100%);
+  }
+}

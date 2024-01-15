@@ -5,15 +5,20 @@ import { isNaN, useFormik } from 'formik';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
 import { BtnModeDark } from "../../../Share/BtnModeDark/BtnModeDark";
+import { IoIosEye } from "react-icons/io";
+import { FaEyeSlash } from "react-icons/fa";
 
 
 export const FormRegister = () => {
 
+
+    
     const [visible, setVisible] = useState(false);
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({})
+    const [type, setType] = useState("password")
 
     const handleChangeUsername = (e) => {
         setUsername(e.target.value)
@@ -27,7 +32,15 @@ export const FormRegister = () => {
         setPassword(e.target.value)
     }
 
-    const formValide =async () => {
+    const handleChangeType = () => {
+        if (type == "password") {
+            setType("text")
+        } else {
+            setType("password")
+        }
+    }
+
+    const formValide = async () => {
         let error = {};
         if (username.length <= 0 || /^\s+/.test(username)) {
             error.username = "obligatory field";
@@ -49,11 +62,11 @@ export const FormRegister = () => {
 
 
 
-    const registerUser=async() => {
-        
-        let err=await formValide();
-       
-        if ( Object.keys(err).length == 0) {
+    const registerUser = async () => {
+
+        let err = await formValide();
+
+        if (Object.keys(err).length == 0) {
             try {
                 let user = JSON.stringify({ username: username, email: email, password: password });
                 localStorage.setItem('user', user)
@@ -64,14 +77,14 @@ export const FormRegister = () => {
             } catch (error) {
                 toast.error("error")
             }
-        }else {
+        } else {
 
             toast.error('Correct the fields to continue')
-        } 
-       
+        }
+
     }
 
-    const login = async() => {
+    const login = async () => {
         try {
             let user = JSON.parse(localStorage.getItem('user'));
             console.log(user);
@@ -89,11 +102,11 @@ export const FormRegister = () => {
 
     }
 
-    const formatErrors=()=>{
+    const formatErrors = () => {
         setErrors({})
     }
 
-    const formatData=()=>{
+    const formatData = () => {
         setUsername('')
         setEmail('')
         setPassword('')
@@ -125,9 +138,21 @@ export const FormRegister = () => {
                 <InputReusable type={"email"} label={"Email"} name={"email"} change={handleChangeEmail} value={email} required
                     error={errors.email && <p>{errors.email}</p>} />
 
-                <InputReusable type={"password"} label={"Password"} name={"password"} change={handleChangePassword} value={password} required
-                    error={errors.password && <p>{errors.password}</p>} />
-
+                <div className="relative">
+                    <InputReusable labelFor={"password"} id={"password"} type={type} label={"Password"} name={"password"} change={handleChangePassword} value={password} required
+                        error={errors.password && <p>{errors.password}</p>} autComplete={'current-password'} />
+                    {password
+                        ?
+                        <span className="absolute right-0 bottom-0  text-[20px] dark:text-[#E5D714] pb-2 " onClick={handleChangeType} >
+                            {type == "password" ? <IoIosEye />
+                                :
+                                <FaEyeSlash />
+                            }
+                        </span>
+                        :
+                        <></>
+                    }
+                </div>
 
 
                 <div className="bg-transparent mt-2">
